@@ -4,16 +4,14 @@ export function Timer() {
     const[time, setTime] = useState(30)
 
     function runTimer() {
-        return time - 1
+        setTime(time - 1)
     }
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setTime(runTimer());
-        }, 1000)
+        const timerId = setInterval(runTimer, 1000)
 
         return function () {
-            clearTimeout(timer)
+            clearInterval(timerId)
         }
     })
 
