@@ -1,2 +1,8 @@
-## Ramp Up Pomodoro
+# UpDoro - Progressive Pomodoro
 
+### Build
+
+```
+$ yarn install
+$ yarn start
+```
