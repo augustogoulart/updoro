@@ -2,18 +2,21 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
-    const [time, setTime] = useState(5)
+    const timers = [5, 10, 15]
+
     const [runs, setRuns] = useState(1)
-    const timer_has_ended = time === 0
+    const [time, setTime] = useState(timers[0])
 
     function runTimer() {
         setTime(time - 1)
     }
 
     useEffect(() => {
-        if (timer_has_ended) {
-            setRuns(runs + 1)
-            setTime(5)
+        if (time === 0) {
+            if (runs < timers.length) {
+                setRuns(runs + 1)
+                setTime(timers[runs])
+            }
         } else {
             const timerId = setInterval(runTimer, 1000)
             return function () {
@@ -30,7 +33,7 @@ function App() {
                     Pause
                 </div>
                 <div className={"intervals"}>
-                    {runs}/10
+                    {runs}/{timers.length}
                 </div>
             </header>
         </div>
