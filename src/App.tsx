@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {timerHasEnded ? <TimerEnded/> : <TimerRunner time={time} runs={runs} timers={timers}/>}
+        {runs === timers.length && timerHasEnded ? <TimerEnded/> : <TimerRunner time={time} runs={runs} timers={timers}/>}
       </header>
     </div>
   );
