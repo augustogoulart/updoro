@@ -8,12 +8,17 @@ function App() {
   const timers = [5, 10, 15]
 
   const [runs, setRuns] = useState(1)
+  const [stop, setStop] = useState(false)
   const [time, setTime] = useState(timers[0])
 
   const timerHasEnded = time === 0
 
   function runTimer() {
     setTime(time - 1)
+  }
+
+  function togglePause() {
+    stop ? setStop(false) : setStop(true)
   }
 
   useEffect(() => {
@@ -23,9 +28,11 @@ function App() {
         setTime(timers[runs])
       }
     } else {
-      const timerId = setInterval(runTimer, 1000)
-      return function () {
-        clearInterval(timerId)
+      if (!stop) {
+        const timerId = setInterval(runTimer, 1000)
+        return function () {
+          clearInterval(timerId)
+        }
       }
     }
   })
@@ -35,14 +42,14 @@ function App() {
       <header className="App-header">
         {
           runs === timers.length && timerHasEnded ?
-          <TimerEnded/>
+            <TimerEnded/>
             :
             <>
-              <TimeRunner time={time} />
-                <div onClick={() => console.log("stopped")} className={"controls"}>
-                  Pause
-                </div>
-              <Laps runs={runs} timers={timers} />
+              <TimeRunner time={time}/>
+              <div onClick={() => togglePause()} className={"controls"} style={{"cursor":"pointer"}}>
+                Pause
+              </div>
+              <Laps runs={runs} timers={timers}/>
             </>
         }
       </header>
