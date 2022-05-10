@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import {TimerRunner} from "./components/TimerRunner";
+import {TimeRunner} from "./components/TimerRunner";
 import {TimerEnded} from "./components/TimerEnded";
+import {Laps} from "./components/Laps";
 
 function App() {
   const timers = [5, 10, 15]
@@ -32,7 +33,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {runs === timers.length && timerHasEnded ? <TimerEnded/> : <TimerRunner time={time} runs={runs} timers={timers}/>}
+        {
+          runs === timers.length && timerHasEnded ?
+          <TimerEnded/>
+            :
+            <>
+              <TimeRunner time={time} />
+                <div onClick={() => console.log("stopped")} className={"controls"}>
+                  Pause
+                </div>
+              <Laps runs={runs} timers={timers} />
+            </>
+        }
       </header>
     </div>
   );
