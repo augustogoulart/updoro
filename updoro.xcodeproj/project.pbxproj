@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B39E1F392A798A51007671DC /* updoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E1F382A798A51007671DC /* updoroApp.swift */; };
+		B39E1F3B2A798A51007671DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E1F3A2A798A51007671DC /* ContentView.swift */; };
+		B39E1F3D2A798A53007671DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39E1F3C2A798A53007671DC /* Assets.xcassets */; };
+		B39E1F402A798A53007671DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39E1F3F2A798A53007671DC /* Preview Assets.xcassets */; };
+		B39E1F4B2A798A53007671DC /* updoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E1F4A2A798A53007671DC /* updoroTests.swift */; };
+		B39E1F552A798A53007671DC /* updoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E1F542A798A53007671DC /* updoroUITests.swift */; };
+		B39E1F572A798A53007671DC /* updoroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E1F562A798A53007671DC /* updoroUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B39E1F472A798A53007671DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B39E1F2D2A798A51007671DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B39E1F342A798A51007671DC;
+			remoteInfo = updoro;
+		};
+		B39E1F512A798A53007671DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B39E1F2D2A798A51007671DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B39E1F342A798A51007671DC;
+			remoteInfo = updoro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B39E1F352A798A51007671DC /* updoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = updoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B39E1F382A798A51007671DC /* updoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updoroApp.swift; sourceTree = "<group>"; };
+		B39E1F3A2A798A51007671DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B39E1F3C2A798A53007671DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B39E1F3F2A798A53007671DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B39E1F412A798A53007671DC /* updoro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = updoro.entitlements; sourceTree = "<group>"; };
+		B39E1F462A798A53007671DC /* updoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = updoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B39E1F4A2A798A53007671DC /* updoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updoroTests.swift; sourceTree = "<group>"; };
+		B39E1F502A798A53007671DC /* updoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = updoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B39E1F542A798A53007671DC /* updoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updoroUITests.swift; sourceTree = "<group>"; };
+		B39E1F562A798A53007671DC /* updoroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updoroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B39E1F322A798A51007671DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39E1F432A798A53007671DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39E1F4D2A798A53007671DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B39E1F2C2A798A51007671DC = {
+			isa = PBXGroup;
+			children = (
+				B39E1F372A798A51007671DC /* updoro */,
+				B39E1F492A798A53007671DC /* updoroTests */,
+				B39E1F532A798A53007671DC /* updoroUITests */,
+				B39E1F362A798A51007671DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B39E1F362A798A51007671DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B39E1F352A798A51007671DC /* updoro.app */,
+				B39E1F462A798A53007671DC /* updoroTests.xctest */,
+				B39E1F502A798A53007671DC /* updoroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B39E1F372A798A51007671DC /* updoro */ = {
+			isa = PBXGroup;
+			children = (
+				B39E1F382A798A51007671DC /* updoroApp.swift */,
+				B39E1F3A2A798A51007671DC /* ContentView.swift */,
+				B39E1F3C2A798A53007671DC /* Assets.xcassets */,
+				B39E1F412A798A53007671DC /* updoro.entitlements */,
+				B39E1F3E2A798A53007671DC /* Preview Content */,
+			);
+			path = updoro;
+			sourceTree = "<group>";
+		};
+		B39E1F3E2A798A53007671DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B39E1F3F2A798A53007671DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B39E1F492A798A53007671DC /* updoroTests */ = {
+			isa = PBXGroup;
+			children = (
+				B39E1F4A2A798A53007671DC /* updoroTests.swift */,
+			);
+			path = updoroTests;
+			sourceTree = "<group>";
+		};
+		B39E1F532A798A53007671DC /* updoroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B39E1F542A798A53007671DC /* updoroUITests.swift */,
+				B39E1F562A798A53007671DC /* updoroUITestsLaunchTests.swift */,
+			);
+			path = updoroUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B39E1F342A798A51007671DC /* updoro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B39E1F5A2A798A54007671DC /* Build configuration list for PBXNativeTarget "updoro" */;
+			buildPhases = (
+				B39E1F312A798A51007671DC /* Sources */,
+				B39E1F322A798A51007671DC /* Frameworks */,
+				B39E1F332A798A51007671DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = updoro;
+			productName = updoro;
+			productReference = B39E1F352A798A51007671DC /* updoro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B39E1F452A798A53007671DC /* updoroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B39E1F5D2A798A54007671DC /* Build configuration list for PBXNativeTarget "updoroTests" */;
+			buildPhases = (
+				B39E1F422A798A53007671DC /* Sources */,
+				B39E1F432A798A53007671DC /* Frameworks */,
+				B39E1F442A798A53007671DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B39E1F482A798A53007671DC /* PBXTargetDependency */,
+			);
+			name = updoroTests;
+			productName = updoroTests;
+			productReference = B39E1F462A798A53007671DC /* updoroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B39E1F4F2A798A53007671DC /* updoroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B39E1F602A798A54007671DC /* Build configuration list for PBXNativeTarget "updoroUITests" */;
+			buildPhases = (
+				B39E1F4C2A798A53007671DC /* Sources */,
+				B39E1F4D2A798A53007671DC /* Frameworks */,
+				B39E1F4E2A798A53007671DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B39E1F522A798A53007671DC /* PBXTargetDependency */,
+			);
+			name = updoroUITests;
+			productName = updoroUITests;
+			productReference = B39E1F502A798A53007671DC /* updoroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B39E1F2D2A798A51007671DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					B39E1F342A798A51007671DC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					B39E1F452A798A53007671DC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B39E1F342A798A51007671DC;
+					};
+					B39E1F4F2A798A53007671DC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B39E1F342A798A51007671DC;
+					};
+				};
+			};
+			buildConfigurationList = B39E1F302A798A51007671DC /* Build configuration list for PBXProject "updoro" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B39E1F2C2A798A51007671DC;
+			productRefGroup = B39E1F362A798A51007671DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B39E1F342A798A51007671DC /* updoro */,
+				B39E1F452A798A53007671DC /* updoroTests */,
+				B39E1F4F2A798A53007671DC /* updoroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B39E1F332A798A51007671DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39E1F402A798A53007671DC /* Preview Assets.xcassets in Resources */,
+				B39E1F3D2A798A53007671DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39E1F442A798A53007671DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39E1F4E2A798A53007671DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B39E1F312A798A51007671DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39E1F3B2A798A51007671DC /* ContentView.swift in Sources */,
+				B39E1F392A798A51007671DC /* updoroApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39E1F422A798A53007671DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39E1F4B2A798A53007671DC /* updoroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39E1F4C2A798A53007671DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39E1F552A798A53007671DC /* updoroUITests.swift in Sources */,
+				B39E1F572A798A53007671DC /* updoroUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B39E1F482A798A53007671DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B39E1F342A798A51007671DC /* updoro */;
+			targetProxy = B39E1F472A798A53007671DC /* PBXContainerItemProxy */;
+		};
+		B39E1F522A798A53007671DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B39E1F342A798A51007671DC /* updoro */;
+			targetProxy = B39E1F512A798A53007671DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B39E1F582A798A54007671DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B39E1F592A798A54007671DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B39E1F5B2A798A54007671DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = updoro/updoro.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"updoro/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.time.updoro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B39E1F5C2A798A54007671DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = updoro/updoro.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"updoro/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.time.updoro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B39E1F5E2A798A54007671DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.time.updoroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/updoro.app/Contents/MacOS/updoro";
+			};
+			name = Debug;
+		};
+		B39E1F5F2A798A54007671DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.time.updoroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/updoro.app/Contents/MacOS/updoro";
+			};
+			name = Release;
+		};
+		B39E1F612A798A54007671DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.time.updoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = updoro;
+			};
+			name = Debug;
+		};
+		B39E1F622A798A54007671DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.time.updoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = updoro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B39E1F302A798A51007671DC /* Build configuration list for PBXProject "updoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B39E1F582A798A54007671DC /* Debug */,
+				B39E1F592A798A54007671DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B39E1F5A2A798A54007671DC /* Build configuration list for PBXNativeTarget "updoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B39E1F5B2A798A54007671DC /* Debug */,
+				B39E1F5C2A798A54007671DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B39E1F5D2A798A54007671DC /* Build configuration list for PBXNativeTarget "updoroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B39E1F5E2A798A54007671DC /* Debug */,
+				B39E1F5F2A798A54007671DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B39E1F602A798A54007671DC /* Build configuration list for PBXNativeTarget "updoroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B39E1F612A798A54007671DC /* Debug */,
+				B39E1F622A798A54007671DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B39E1F2D2A798A51007671DC /* Project object */;
+}
