@@ -1,33 +1,8 @@
+import { PomodoroTimer } from '@renderer/types'
+
 import React, { useState, useEffect, useRef } from 'react'
 
-function formatTime(time: number): string {
-  const minutes = Math.floor(time / 60)
-  const seconds = time % 60
-  return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
-}
-
-type StateSetter<T> = (value: T | ((prev: T) => T)) => void
-
-interface TimerState {
-  hasFinished: boolean
-  isRunning: boolean
-  setHasFinished: StateSetter<boolean>
-  setIsRunning: StateSetter<boolean>
-  setCurrentTimer: StateSetter<number>
-  currentTimer: number
-}
-
-interface PomodoroTimer {
-  time: { timer: number; type: 'focus' | 'break' }
-  variant: 'focus' | 'break'
-  timerState: TimerState
-}
-
-export default function PomodoroApp({
-  time,
-  variant,
-  timerState
-}: PomodoroTimer): React.JSX.Element {
+export default function PomodoroApp({ time, timerState }: PomodoroTimer): React.JSX.Element {
   const [timeLeft, setTimeLeft] = useState<number>(time.timer)
   const { isRunning, setIsRunning, setHasFinished, setCurrentTimer } = timerState
   const timerRef = useRef<NodeJS.Timeout | null>(null)
@@ -56,6 +31,12 @@ export default function PomodoroApp({
       setCurrentTimer((prev) => prev + 1)
     }
   }, [setCurrentTimer, setHasFinished, setIsRunning, timeLeft])
+
+  function formatTime(time: number): string {
+    const minutes = Math.floor(time / 60)
+    const seconds = time % 60
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
+  }
 
   function handleReset(): void {
     setIsRunning(false)
