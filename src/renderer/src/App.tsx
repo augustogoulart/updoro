@@ -7,9 +7,11 @@ function App(): React.JSX.Element {
   const [currentTimer, setCurrentTimer] = useState<number>(0)
 
   const timerSchedule = {
-    0: 3,
-    1: 5,
-    2: 7
+    0: { timer: 3, type: 'focus' },
+    1: { timer: 5, type: 'break' },
+    2: { timer: 5, type: 'focus' },
+    3: { timer: 5, type: 'break' },
+    4: { timer: 7, type: 'focus' }
   }
 
   const hasNextTimer = timerSchedule[currentTimer]
