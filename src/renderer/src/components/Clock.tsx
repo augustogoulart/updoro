@@ -18,7 +18,7 @@ interface TimerState {
 }
 
 interface PomodoroTimer {
-  time: number
+  time: { timer: number; type: 'focus' | 'break' }
   variant: 'focus' | 'break'
   timerState: TimerState
 }
@@ -28,12 +28,12 @@ export default function PomodoroApp({
   variant,
   timerState
 }: PomodoroTimer): React.JSX.Element {
-  const [timeLeft, setTimeLeft] = useState<number>(time)
+  const [timeLeft, setTimeLeft] = useState<number>(time.timer)
   const { isRunning, setIsRunning, setHasFinished, setCurrentTimer } = timerState
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
-    setTimeLeft(time)
+    setTimeLeft(time.timer)
   }, [time])
 
   useEffect(() => {
@@ -60,11 +60,11 @@ export default function PomodoroApp({
   function handleReset(): void {
     setIsRunning(false)
     setHasFinished(false)
-    setTimeLeft(time)
+    setTimeLeft(time.timer)
   }
 
   function colorVariant(): string {
-    return variant === 'break' ? 'green' : 'red'
+    return time.type === 'break' ? 'green' : 'red'
   }
 
   return (
