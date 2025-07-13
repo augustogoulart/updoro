@@ -3,3 +3,7 @@
 body {
   display: flex;
 }
+
+#root {
+  width: 100vw;
+}
