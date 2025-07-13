@@ -13,6 +13,8 @@ interface TimerState {
   isRunning: boolean
   setHasFinished: StateSetter<boolean>
   setIsRunning: StateSetter<boolean>
+  setCurrentTimer: StateSetter<number>
+  currentTimer: number
 }
 
 interface PomodoroTimer {
@@ -27,8 +29,12 @@ export default function PomodoroApp({
   timerState
 }: PomodoroTimer): React.JSX.Element {
   const [timeLeft, setTimeLeft] = useState<number>(time)
-  const { isRunning, setIsRunning, setHasFinished } = timerState
+  const { isRunning, setIsRunning, setHasFinished, setCurrentTimer } = timerState
   const timerRef = useRef<NodeJS.Timeout | null>(null)
+
+  useEffect(() => {
+    setTimeLeft(time)
+  }, [time])
 
   useEffect(() => {
     if (isRunning) {
@@ -36,17 +42,20 @@ export default function PomodoroApp({
         setTimeLeft((prev) => prev - 1)
       }, 1000)
     }
-
-    if (timeLeft === 0) {
-      setIsRunning(false)
-      setHasFinished(true)
-    }
     return () => {
       if (timerRef.current) {
         clearInterval(timerRef.current)
       }
     }
-  }, [isRunning, timeLeft, setHasFinished, setIsRunning])
+  }, [isRunning, setTimeLeft])
+
+  useEffect(() => {
+    if (timeLeft === 0) {
+      setIsRunning(false)
+      setHasFinished(true)
+      setCurrentTimer((prev) => prev + 1)
+    }
+  }, [setCurrentTimer, setHasFinished, setIsRunning, timeLeft])
 
   function handleReset(): void {
     setIsRunning(false)

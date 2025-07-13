@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Clock from './components/Clock'
 
 function App(): React.JSX.Element {
@@ -12,27 +12,29 @@ function App(): React.JSX.Element {
     2: 7
   }
 
-  useEffect(() => {
-    if (!isRunning && hasFinished) {
-      setCurrentTimer((prev) => prev + 1)
-    }
-  }, [isRunning, hasFinished, setCurrentTimer])
+  const hasNextTimer = timerSchedule[currentTimer]
+
   return (
     <>
       <p>Is Running: {isRunning ? 'true' : 'false'}</p>
       <p>Has Finished: {hasFinished ? 'true' : 'false'}</p>
       <p>Current timer: {currentTimer}</p>
-
-      <Clock
-        time={timerSchedule[currentTimer]}
-        variant="focus"
-        timerState={{
-          hasFinished: hasFinished,
-          setHasFinished: setHasFinished,
-          isRunning: isRunning,
-          setIsRunning: setIsRunning
-        }}
-      />
+      {hasNextTimer ? (
+        <Clock
+          time={hasNextTimer}
+          variant="focus"
+          timerState={{
+            hasFinished: hasFinished,
+            setHasFinished: setHasFinished,
+            isRunning: isRunning,
+            setIsRunning: setIsRunning,
+            setCurrentTimer: setCurrentTimer,
+            currentTimer: currentTimer
+          }}
+        />
+      ) : (
+        <p>END</p>
+      )}
     </>
   )
 }
