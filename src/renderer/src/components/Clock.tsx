@@ -2,6 +2,36 @@ import { PomodoroTimer } from '@renderer/types'
 
 import React, { useState, useEffect, useRef } from 'react'
 
+function playBeep(frequency = 800, duration = 100, volume = 0.1): void {
+  const ctx = new (window.AudioContext || window.AudioContext)()
+  const oscillator = ctx.createOscillator()
+  const gain = ctx.createGain()
+
+  oscillator.type = 'sine'
+  oscillator.frequency.setValueAtTime(frequency, ctx.currentTime)
+  gain.gain.setValueAtTime(volume, ctx.currentTime)
+
+  oscillator.connect(gain)
+  gain.connect(ctx.destination)
+
+  oscillator.start()
+  oscillator.stop(ctx.currentTime + duration / 1000) // duration in seconds
+}
+
+function playBeepSequence(): void {
+  const sequence = [
+    { delay: 0, duration: 100 },
+    { delay: 600, duration: 100 },
+    { delay: 1000, duration: 300 } // longer final beep
+  ]
+
+  for (const { delay, duration } of sequence) {
+    setTimeout(() => {
+      playBeep(800, duration)
+    }, delay)
+  }
+}
+
 export default function PomodoroApp({ time, timerState }: PomodoroTimer): React.JSX.Element {
   const [timeLeft, setTimeLeft] = useState<number>(time.timer)
   const { isRunning, setIsRunning, setHasFinished, setCurrentTimer } = timerState
@@ -26,6 +56,7 @@ export default function PomodoroApp({ time, timerState }: PomodoroTimer): React.
 
   useEffect(() => {
     if (timeLeft === 0) {
+      playBeepSequence()
       setIsRunning(false)
       setHasFinished(true)
       setCurrentTimer((prev) => prev + 1)
