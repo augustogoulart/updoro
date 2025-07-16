@@ -45,14 +45,16 @@ export default function PomodoroApp({ time, timerState }: PomodoroTimer): React.
   }
 
   function colorVariant(): string {
-    return time.type === 'break' ? 'green' : 'red'
+    return time.type === 'break' ? 'text-green' : 'text-red'
   }
 
   return (
-    <div style={{ fontFamily: 'sans-serif', textAlign: 'center' }}>
-      <h2 style={{ fontSize: '4rem', color: colorVariant() }}>{formatTime(timeLeft)}</h2>
-      <button onClick={() => setIsRunning((prev) => !prev)}>{isRunning ? 'Pause' : 'Start'}</button>
-      <button onClick={handleReset} style={{ marginLeft: '10px' }}>
+    <div>
+      <h2 className={`timer ${colorVariant()}`}>{formatTime(timeLeft)}</h2>
+      <button className="button button-start" onClick={() => setIsRunning((prev) => !prev)}>
+        {isRunning ? 'Pause' : 'Start'}
+      </button>
+      <button className="button button-reset" onClick={handleReset}>
         Reset
       </button>
     </div>
