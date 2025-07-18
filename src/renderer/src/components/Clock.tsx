@@ -80,6 +80,11 @@ export default function PomodoroApp({ time, timerState }: PomodoroTimer): React.
     return time.type === 'break' ? 'text-green' : 'text-red'
   }
 
+  function handleSkip(): void {
+    setIsRunning(false)
+    setCurrentTimer((prev) => prev + 1)
+  }
+
   return (
     <div>
       <h2 className={`timer ${colorVariant()}`}>{formatTime(timeLeft)}</h2>
@@ -88,6 +93,9 @@ export default function PomodoroApp({ time, timerState }: PomodoroTimer): React.
       </button>
       <button className="button button-reset" onClick={handleReset}>
         Reset
+      </button>
+      <button className="button button-skip" onClick={handleSkip}>
+        Skip
       </button>
     </div>
   )
