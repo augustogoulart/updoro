@@ -7,7 +7,6 @@ function minToSec(value: number): number {
 }
 
 function App(): React.JSX.Element {
-  const [isRunning, setIsRunning] = useState<boolean>(false)
   const [hasFinished, setHasFinished] = useState<boolean>(false)
   const [currentTimer, setCurrentTimer] = useState<number>(0)
 
@@ -29,8 +28,6 @@ function App(): React.JSX.Element {
           timerState={{
             hasFinished: hasFinished,
             setHasFinished: setHasFinished,
-            isRunning: isRunning,
-            setIsRunning: setIsRunning,
             setCurrentTimer: setCurrentTimer,
             currentTimer: currentTimer
           }}

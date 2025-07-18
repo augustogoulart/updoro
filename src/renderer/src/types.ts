@@ -13,9 +13,7 @@ export type StateSetter<T> = (value: T | ((prev: T) => T)) => void
 
 export interface TimerState {
   hasFinished: boolean
-  isRunning: boolean
   setHasFinished: StateSetter<boolean>
-  setIsRunning: StateSetter<boolean>
   setCurrentTimer: StateSetter<number>
   currentTimer: number
 }
