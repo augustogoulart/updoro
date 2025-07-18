@@ -34,7 +34,8 @@ function playBeepSequence(): void {
 
 export default function PomodoroApp({ time, timerState }: PomodoroTimer): React.JSX.Element {
   const [timeLeft, setTimeLeft] = useState<number>(time.timer)
-  const { isRunning, setIsRunning, setHasFinished, setCurrentTimer } = timerState
+  const [isRunning, setIsRunning] = useState<boolean>(false)
+  const { setHasFinished, setCurrentTimer } = timerState
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
