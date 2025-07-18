@@ -104,7 +104,7 @@ body {
 }
 
 .button-start {
-  background-color: var(--system-gray); /* system green */
+  background-color: var(--system-gray);
   color: white;
 }
 

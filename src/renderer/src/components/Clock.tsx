@@ -15,14 +15,14 @@ function playBeep(frequency = 800, duration = 100, volume = 0.1): void {
   gain.connect(ctx.destination)
 
   oscillator.start()
-  oscillator.stop(ctx.currentTime + duration / 1000) // duration in seconds
+  oscillator.stop(ctx.currentTime + duration / 1000)
 }
 
 function playBeepSequence(): void {
   const sequence = [
     { delay: 0, duration: 100 },
     { delay: 600, duration: 100 },
-    { delay: 1000, duration: 300 } // longer final beep
+    { delay: 1000, duration: 300 }
   ]
 
   for (const { delay, duration } of sequence) {
