@@ -18,7 +18,7 @@ function getTrayIcon(): NativeImage {
 function createTrayWindow(): void {
   mainWindow = new BrowserWindow({
     width: 360,
-    height: 260,
+    height: 310,
     show: false,
     frame: false,
     resizable: false,

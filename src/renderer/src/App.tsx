@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Clock from './components/Clock'
 import { TimeSchedule } from './types'
 
@@ -23,13 +23,15 @@ function App(): React.JSX.Element {
   const [hasFinished, setHasFinished] = useState<boolean>(false)
   const [currentTimer, setCurrentTimer] = useState<number>(0)
   const [focusTimerCount, setFocusTimerCount] = useState<number>(1)
+  const prevTimer = useRef<number>(currentTimer)
 
   const hasNextTimer = timerSchedule[currentTimer]
 
   useEffect(() => {
-    if (timerSchedule[currentTimer].type === 'focus') {
+    if (timerSchedule[currentTimer].type === 'focus' && prevTimer.current !== currentTimer) {
       setFocusTimerCount((prev) => prev + 1)
     }
+    prevTimer.current = currentTimer
   }, [currentTimer])
 
   return (
