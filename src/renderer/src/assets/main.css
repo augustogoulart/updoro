@@ -103,7 +103,8 @@ body {
   min-width: 80px;
 }
 
-.button-start {
+.button-start,
+.button-restart {
   background-color: var(--system-gray);
   color: white;
 }
