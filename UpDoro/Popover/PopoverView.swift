@@ -28,9 +28,6 @@ struct PopoverView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text("UpDoro")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
-                Text(headerSubtitle)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
             }
             Spacer()
             if let n = store.currentIntervalNumber, let total = store.totalIntervals {
@@ -49,11 +46,6 @@ struct PopoverView: View {
                         .font(.caption2.weight(.bold))
                         .tracking(1.4)
                         .foregroundStyle(accentForeground)
-
-                    Text(activeModeTitle)
-                        .font(.system(size: 28, weight: .semibold, design: .rounded))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
                 }
                 Spacer()
                 Image(systemName: iconName)
@@ -202,23 +194,9 @@ struct PopoverView: View {
         }
     }
 
-    private var headerSubtitle: String {
-        if store.state.isIdle {
-            return "Pick a mode below. The timer stays visible while you switch."
-        }
-        if isWaitingToStartInterval {
-            return waitingSubtitle
-        }
-        return "Mode list stays pinned while the current interval runs."
-    }
-
     private var intervalLabel: String {
         guard let interval = store.currentInterval else { return "READY" }
         return interval.kind == .work ? "FOCUS" : "RESET"
-    }
-
-    private var activeModeTitle: String {
-        store.mode?.name ?? "Pick a mode"
     }
 
     private var timerText: String {
