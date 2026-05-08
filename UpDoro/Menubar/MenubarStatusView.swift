@@ -12,7 +12,7 @@ struct MenubarStatusView: View {
                     .foregroundStyle(foreground)
             }
         }
-        .padding(.horizontal, hasLabel ? 6 : 4)
+        .padding(.horizontal, 6)
         .padding(.vertical, 2)
         .frame(height: 20)
         .background(
@@ -22,8 +22,6 @@ struct MenubarStatusView: View {
         .padding(.horizontal, 4)
         .fixedSize()
     }
-
-    private var hasLabel: Bool { timeText != nil }
 
     private var kind: Interval.Kind? { store.currentInterval?.kind }
 
@@ -52,8 +50,7 @@ struct MenubarStatusView: View {
     }
 
     private var timeText: String? {
-        guard let remaining = store.remainingSeconds else { return nil }
-        return TimeFormatter.menubar(seconds: remaining)
+        return TimeFormatter.menubar(seconds: store.remainingSeconds ?? 0)
     }
 
     private var foreground: Color {
