@@ -144,7 +144,7 @@ struct PopoverView: View {
                             .font(.caption2.weight(.bold))
                             .tracking(1)
                             .padding(.horizontal, 6)
-                            .padding(.vertical, 3)
+                            .padding(.vertical, 6)
                             .background(
                                 Capsule(style: .continuous)
                                     .fill(accentBackground)
