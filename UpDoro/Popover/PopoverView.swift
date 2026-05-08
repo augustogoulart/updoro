@@ -5,7 +5,6 @@ struct PopoverView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            header
             timerPanel
             modeList
         }
@@ -23,57 +22,16 @@ struct PopoverView: View {
         )
     }
 
-    private var header: some View {
-        HStack(alignment: .firstTextBaseline) {
-            VStack(alignment: .leading, spacing: 3) {
-                Text("UpDoro")
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
-            }
-            Spacer()
-            if let n = store.currentIntervalNumber, let total = store.totalIntervals {
-                Label("Step \(n) of \(total)", systemImage: "point.topleft.down.curvedto.point.bottomright.up.fill")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
-            }
-        }
-    }
-
     private var timerPanel: some View {
         VStack(alignment: .leading, spacing: 14) {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(intervalLabel)
-                        .font(.caption2.weight(.bold))
-                        .tracking(1.4)
-                        .foregroundStyle(accentForeground)
-                }
-                Spacer()
-                Image(systemName: iconName)
-                    .font(.system(size: 18, weight: .semibold))
-                    .foregroundStyle(accentForeground)
-                    .padding(10)
-                    .background(
-                        Circle()
-                            .fill(.white.opacity(0.6))
-                    )
-            }
-
             Text(timerText)
                 .font(.system(size: 56, weight: .medium, design: .rounded).monospacedDigit())
 
             HStack {
-                Text(detailText)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
                 Spacer()
-                if store.state.isPaused {
-                    Text(pausedStatusText)
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.secondary)
-                }
             }
 
-            HStack(spacing: 8) {
+            VStack(spacing: 8) {
                 if store.state.isIdle {
                     Button("Start Focus") {
                         if let firstMode = BuiltInModes.all.first {
@@ -82,12 +40,19 @@ struct PopoverView: View {
                     }
                     .buttonStyle(.borderedProminent)
                 } else {
-                    Button(primaryButtonTitle) {
-                        store.state.isPaused ? store.resume() : store.pause()
+                    if let n = store.currentIntervalNumber, let total = store.totalIntervals {
+                        Label("Step \(n) of \(total)", systemImage: "point.topleft.down.curvedto.point.bottomright.up.fill")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(.secondary)
                     }
-                    .buttonStyle(.borderedProminent)
-                    Button("Skip") { store.skip() }
-                    Button("Stop") { store.stop() }
+                    HStack {
+                        Button(primaryButtonTitle) {
+                            store.state.isPaused ? store.resume() : store.pause()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        Button("Skip") { store.skip() }
+                        Button("Stop") { store.stop() }
+                    }
                 }
             }
         }
@@ -194,11 +159,6 @@ struct PopoverView: View {
         }
     }
 
-    private var intervalLabel: String {
-        guard let interval = store.currentInterval else { return "READY" }
-        return interval.kind == .work ? "FOCUS" : "RESET"
-    }
-
     private var timerText: String {
         guard let remaining = store.remainingSeconds else { return "00:00" }
         return TimeFormatter.popoverCountdown(seconds: remaining)
@@ -231,17 +191,6 @@ struct PopoverView: View {
 
     private var isWaitingToStartInterval: Bool {
         store.state.isPaused && store.state.elapsedSeconds == 0
-    }
-
-    private var waitingSubtitle: String {
-        switch store.currentInterval?.kind {
-        case .work:
-            return "Break finished. Click Play when you're ready for the next focus block."
-        case .rest:
-            return "Focus finished. Click Play when you're ready to start your break."
-        case .none:
-            return "Click Play when you're ready to start."
-        }
     }
 
     private var waitingStatusText: String {
